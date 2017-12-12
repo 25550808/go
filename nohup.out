@@ -1,0 +1,2 @@
+[ORM]2017/12/11 18:29:25 register db Ping `default`, dial tcp 192.168.100.7:3306: getsockopt: connection timed out
+must have one register DataBase alias named `default`

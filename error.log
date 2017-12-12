@@ -1,0 +1,189 @@
+[ORM]2017/12/11 19:54:49  -[Queries/default] - [  OK / db.QueryRow /     9.2ms] - [SELECT COUNT(*) FROM `t_task` T0 WHERE T0.`status` = ? ] - `1`
+[ORM]2017/12/11 19:54:49  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_id`, T0.`task_name`, T0.`task_type`, T0.`description`, T0.`cron_spec`, T0.`concurrent`, T0.`command`, T0.`status`, T0.`notify`, T0.`notify_email`, T0.`timeout`, T0.`execute_times`, T0.`prev_time`, T0.`create_time` FROM `t_task` T0 WHERE T0.`status` = ? ORDER BY T0.`id` DESC LIMIT 1000000] - `1`
+2017/12/11 19:54:49.173 [1;34m[I] [asm_amd64.s:2197] http server Running on http://:9091[0m
+[ORM]2017/12/11 19:54:57  -[Queries/default] - [  OK /    db.Query /     0.3ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 19:54:57  -[Queries/default] - [  OK / db.QueryRow /     0.1ms] - [SELECT COUNT(*) FROM `t_task_log` T0 ]
+[ORM]2017/12/11 19:54:57  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`task_id`, T0.`output`, T0.`error`, T0.`status`, T0.`process_time`, T0.`create_time` FROM `t_task_log` T0 ORDER BY T0.`id` DESC LIMIT 20]
+[ORM]2017/12/11 19:54:57  -[Queries/default] - [  OK / db.QueryRow /     0.1ms] - [SELECT COUNT(*) FROM `t_task_log` T0 WHERE T0.`status` < ? ] - `0`
+[ORM]2017/12/11 19:54:57  -[Queries/default] - [  OK /    db.Query /     0.1ms] - [SELECT T0.`id`, T0.`task_id`, T0.`output`, T0.`error`, T0.`status`, T0.`process_time`, T0.`create_time` FROM `t_task_log` T0 WHERE T0.`status` < ? ORDER BY T0.`id` DESC LIMIT 20] - `0`
+2017/12/11 19:54:57.907 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:54:57] "GET / HTTP/1.1 200 0" 0.002922  Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 19:54:57.956 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:54:57] "GET /static/css/bootstrap.min.css HTTP/1.1 200 0" 0.001454 http://10.1.100.7:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 19:54:57.958 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:54:57] "GET /static/css/bootstrap-responsive.min.css HTTP/1.1 200 0" 0.001025 http://10.1.100.7:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 19:54:57.959 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:54:57] "GET /static/css/style.css HTTP/1.1 200 0" 0.000540 http://10.1.100.7:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 19:54:57.960 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:54:57] "GET /static/css/font-awesome.css HTTP/1.1 200 0" 0.000581 http://10.1.100.7:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 19:54:58.033 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:54:58] "GET /static/js/jquery-1.7.2.min.js HTTP/1.1 200 0" 0.001103 http://10.1.100.7:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 19:54:58.036 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:54:58] "GET /static/js/bootstrap.js HTTP/1.1 200 0" 0.001338 http://10.1.100.7:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 19:54:58.036 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:54:58] "GET /static/js/base.js HTTP/1.1 200 0" 0.000033 http://10.1.100.7:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 19:54:58.043 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:54:58] "GET /static/css/pages/dashboard.css HTTP/1.1 200 0" 0.000232 http://10.1.100.7:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 19:54:58.426 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:54:58] "GET /static/font/fontawesome-webfont.woff?v=3.2.1 HTTP/1.1 200 0" 0.001723 http://10.1.100.7:9091/static/css/font-awesome.css Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 19:54:58  -[Queries/default] - [  OK /    db.Query /     0.3ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+2017/12/11 19:54:58.498 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:54:58] "GET /favicon.ico HTTP/1.1 404 0" 0.000170 http://10.1.100.7:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 19:55:00  -[Queries/default] - [  OK /    db.Query /     1.4ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 19:55:00  -[Queries/default] - [  OK / db.QueryRow /     0.9ms] - [SELECT COUNT(*) FROM `t_task` T0 ]
+[ORM]2017/12/11 19:55:00  -[Queries/default] - [  OK /    db.Query /     1.2ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_id`, T0.`task_name`, T0.`task_type`, T0.`description`, T0.`cron_spec`, T0.`concurrent`, T0.`command`, T0.`status`, T0.`notify`, T0.`notify_email`, T0.`timeout`, T0.`execute_times`, T0.`prev_time`, T0.`create_time` FROM `t_task` T0 ORDER BY T0.`id` DESC LIMIT 20]
+[ORM]2017/12/11 19:55:00  -[Queries/default] - [  OK / db.QueryRow /     0.6ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/11 19:55:00  -[Queries/default] - [  OK /    db.Query /     0.6ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 100]
+2017/12/11 19:55:00.993 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:55:00] "GET /task/list HTTP/1.1 200 0" 0.023110 http://10.1.100.7:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 19:55:01  -[Queries/default] - [  OK /    db.Query /     0.4ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 19:55:58  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 19:55:58  -[Queries/default] - [  OK / db.QueryRow /     0.0ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/11 19:55:58  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 100]
+2017/12/11 19:55:58.537 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:55:58] "GET /task/add HTTP/1.1 200 0" 0.002218 http://10.1.100.7:9091/task/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 19:55:58  -[Queries/default] - [  OK /    db.Query /     0.4ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 19:56:05  -[Queries/default] - [  OK /    db.Query /     0.4ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+2017/12/11 19:56:05.545 [1;44m[D] [server.go:2568] 192.168.50.130 - - [11/Dec/2017 07:56:05] "GET /help HTTP/1.1 200 0" 0.001508 http://10.1.100.7:9091/task/add Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 19:56:05  -[Queries/default] - [  OK /    db.Query /     0.3ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+2017/12/11 20:20:18.349 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /login HTTP/1.1 200 0" 0.000541  Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.592 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /static/css/bootstrap.min.css HTTP/1.1 200 0" 0.001638 http://devtest.boss.onmmc.com:9091/login Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.593 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /static/css/font-awesome.css HTTP/1.1 200 0" 0.000926 http://devtest.boss.onmmc.com:9091/login Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.594 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /static/css/bootstrap-responsive.min.css HTTP/1.1 200 0" 0.001040 http://devtest.boss.onmmc.com:9091/login Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.602 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /static/css/style.css HTTP/1.1 200 0" 0.000846 http://devtest.boss.onmmc.com:9091/login Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.606 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /static/js/bootstrap.js HTTP/1.1 200 0" 0.000611 http://devtest.boss.onmmc.com:9091/login Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.607 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /static/js/jquery-1.7.2.min.js HTTP/1.1 200 0" 0.000472 http://devtest.boss.onmmc.com:9091/login Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.607 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /static/css/pages/signin.css HTTP/1.1 200 0" 0.000608 http://devtest.boss.onmmc.com:9091/login Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.751 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /static/img/body-bg.png HTTP/1.1 200 0" 0.000495 http://devtest.boss.onmmc.com:9091/static/css/pages/signin.css Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.753 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /static/img/signin/password.png HTTP/1.1 200 0" 0.000046 http://devtest.boss.onmmc.com:9091/static/css/pages/signin.css Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.755 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /static/img/signin/user.png HTTP/1.1 200 0" 0.000045 http://devtest.boss.onmmc.com:9091/static/css/pages/signin.css Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.757 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /static/img/signin/check.png HTTP/1.1 200 0" 0.000052 http://devtest.boss.onmmc.com:9091/static/css/pages/signin.css Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:20:18.846 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:20:18] "GET /favicon.ico HTTP/1.1 404 0" 0.000248 http://devtest.boss.onmmc.com:9091/login Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 20:21:06  -[Queries/default] - [  OK /    db.Query /     3.6ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`user_name` = ? LIMIT 1] - `admin`
+[ORM]2017/12/11 20:21:06  -[Queries/default] - [  OK /     db.Exec /    26.0ms] - [UPDATE `t_user` SET `user_name` = ?, `password` = ?, `salt` = ?, `email` = ?, `last_login` = ?, `last_ip` = ?, `status` = ? WHERE `id` = ?] - `admin`, `7fef6171469e80d32c0559f88b377245`, ``, `admin@example.com`, `1512994866`, `192.168.160.253`, `0`, `1`
+[ORM]2017/12/11 20:21:06  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:06  -[Queries/default] - [  OK / db.QueryRow /     0.2ms] - [SELECT COUNT(*) FROM `t_task` T0 ]
+[ORM]2017/12/11 20:21:06  -[Queries/default] - [  OK /    db.Query /     0.1ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_id`, T0.`task_name`, T0.`task_type`, T0.`description`, T0.`cron_spec`, T0.`concurrent`, T0.`command`, T0.`status`, T0.`notify`, T0.`notify_email`, T0.`timeout`, T0.`execute_times`, T0.`prev_time`, T0.`create_time` FROM `t_task` T0 ORDER BY T0.`id` DESC LIMIT 20]
+[ORM]2017/12/11 20:21:06  -[Queries/default] - [  OK / db.QueryRow /     0.0ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/11 20:21:06  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 100]
+2017/12/11 20:21:06.912 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:21:06] "GET /task/list HTTP/1.1 200 0" 0.002577 http://devtest.boss.onmmc.com:9091/login Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:21:06.973 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:21:06] "GET /static/js/base.js HTTP/1.1 200 0" 0.000401 http://devtest.boss.onmmc.com:9091/task/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:21:06.973 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:21:06] "GET /static/css/pages/dashboard.css HTTP/1.1 200 0" 0.000399 http://devtest.boss.onmmc.com:9091/task/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/11 20:21:07.057 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:21:07] "GET /static/font/fontawesome-webfont.woff?v=3.2.1 HTTP/1.1 200 0" 0.000981 http://devtest.boss.onmmc.com:9091/static/css/font-awesome.css Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 20:21:07  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:11  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:11  -[Queries/default] - [  OK / db.QueryRow /     0.2ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/11 20:21:11  -[Queries/default] - [  OK /    db.Query /     0.1ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 20]
+2017/12/11 20:21:11.907 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:21:11] "GET /group/list HTTP/1.1 200 0" 0.002244 http://devtest.boss.onmmc.com:9091/task/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 20:21:11  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:12  -[Queries/default] - [  OK /    db.Query /     0.5ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:12  -[Queries/default] - [  OK / db.QueryRow /     0.3ms] - [SELECT COUNT(*) FROM `t_task` T0 ]
+[ORM]2017/12/11 20:21:12  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_id`, T0.`task_name`, T0.`task_type`, T0.`description`, T0.`cron_spec`, T0.`concurrent`, T0.`command`, T0.`status`, T0.`notify`, T0.`notify_email`, T0.`timeout`, T0.`execute_times`, T0.`prev_time`, T0.`create_time` FROM `t_task` T0 ORDER BY T0.`id` DESC LIMIT 20]
+[ORM]2017/12/11 20:21:12  -[Queries/default] - [  OK / db.QueryRow /     0.0ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/11 20:21:12  -[Queries/default] - [  OK /    db.Query /     0.1ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 100]
+2017/12/11 20:21:12.643 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:21:12] "GET /task/list HTTP/1.1 200 0" 0.003711 http://devtest.boss.onmmc.com:9091/group/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 20:21:12  -[Queries/default] - [  OK /    db.Query /     0.5ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:13  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:13  -[Queries/default] - [  OK / db.QueryRow /     0.1ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/11 20:21:13  -[Queries/default] - [  OK /    db.Query /     0.0ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 20]
+2017/12/11 20:21:13.328 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:21:13] "GET /group/list HTTP/1.1 200 0" 0.002541 http://devtest.boss.onmmc.com:9091/task/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 20:21:13  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:13  -[Queries/default] - [  OK /    db.Query /     0.5ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:13  -[Queries/default] - [  OK / db.QueryRow /     0.0ms] - [SELECT COUNT(*) FROM `t_task` T0 ]
+[ORM]2017/12/11 20:21:13  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_id`, T0.`task_name`, T0.`task_type`, T0.`description`, T0.`cron_spec`, T0.`concurrent`, T0.`command`, T0.`status`, T0.`notify`, T0.`notify_email`, T0.`timeout`, T0.`execute_times`, T0.`prev_time`, T0.`create_time` FROM `t_task` T0 ORDER BY T0.`id` DESC LIMIT 20]
+[ORM]2017/12/11 20:21:13  -[Queries/default] - [  OK / db.QueryRow /     0.1ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/11 20:21:13  -[Queries/default] - [  OK /    db.Query /     0.0ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 100]
+2017/12/11 20:21:13.912 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:21:13] "GET /task/list HTTP/1.1 200 0" 0.002869 http://devtest.boss.onmmc.com:9091/group/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 20:21:13  -[Queries/default] - [  OK /    db.Query /     0.7ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:14  -[Queries/default] - [  OK /    db.Query /     0.4ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:14  -[Queries/default] - [  OK / db.QueryRow /     0.1ms] - [SELECT COUNT(*) FROM `t_task_log` T0 ]
+[ORM]2017/12/11 20:21:14  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`task_id`, T0.`output`, T0.`error`, T0.`status`, T0.`process_time`, T0.`create_time` FROM `t_task_log` T0 ORDER BY T0.`id` DESC LIMIT 20]
+[ORM]2017/12/11 20:21:14  -[Queries/default] - [  OK / db.QueryRow /     0.1ms] - [SELECT COUNT(*) FROM `t_task_log` T0 WHERE T0.`status` < ? ] - `0`
+[ORM]2017/12/11 20:21:14  -[Queries/default] - [  OK /    db.Query /     0.1ms] - [SELECT T0.`id`, T0.`task_id`, T0.`output`, T0.`error`, T0.`status`, T0.`process_time`, T0.`create_time` FROM `t_task_log` T0 WHERE T0.`status` < ? ORDER BY T0.`id` DESC LIMIT 20] - `0`
+2017/12/11 20:21:14.649 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:21:14] "GET / HTTP/1.1 200 0" 0.005054 http://devtest.boss.onmmc.com:9091/task/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 20:21:14  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:17  -[Queries/default] - [  OK /    db.Query /     0.4ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/11 20:21:17  -[Queries/default] - [  OK / db.QueryRow /     0.1ms] - [SELECT COUNT(*) FROM `t_task` T0 ]
+[ORM]2017/12/11 20:21:17  -[Queries/default] - [  OK /    db.Query /     0.0ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_id`, T0.`task_name`, T0.`task_type`, T0.`description`, T0.`cron_spec`, T0.`concurrent`, T0.`command`, T0.`status`, T0.`notify`, T0.`notify_email`, T0.`timeout`, T0.`execute_times`, T0.`prev_time`, T0.`create_time` FROM `t_task` T0 ORDER BY T0.`id` DESC LIMIT 20]
+[ORM]2017/12/11 20:21:17  -[Queries/default] - [  OK / db.QueryRow /     0.1ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/11 20:21:17  -[Queries/default] - [  OK /    db.Query /     0.0ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 100]
+2017/12/11 20:21:17.335 [1;44m[D] [server.go:2568] 192.168.160.253 - - [11/Dec/2017 08:21:17] "GET /task/list HTTP/1.1 200 0" 0.002511 http://devtest.boss.onmmc.com:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/11 20:21:17  -[Queries/default] - [  OK /    db.Query /     0.3ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/12 09:27:40  -[Queries/default] - [  OK /    db.Query /    47.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/12 09:27:40  -[Queries/default] - [  OK / db.QueryRow /     0.3ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/12 09:27:40  -[Queries/default] - [  OK /    db.Query /     0.0ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 20]
+2017/12/12 09:27:40.689 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:40] "GET /group/list HTTP/1.1 200 0" 0.120003 http://10.1.100.7:9091/help Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/12 09:27:40.917 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:40] "GET /static/css/bootstrap.min.css HTTP/1.1 304 0" 0.015750 http://10.1.100.7:9091/group/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/12 09:27:40.942 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:40] "GET /static/css/bootstrap-responsive.min.css HTTP/1.1 304 0" 0.000295 http://10.1.100.7:9091/group/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/12 09:27:40.944 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:40] "GET /static/css/font-awesome.css HTTP/1.1 304 0" 0.000591 http://10.1.100.7:9091/group/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/12 09:27:40.945 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:40] "GET /static/css/style.css HTTP/1.1 304 0" 0.000220 http://10.1.100.7:9091/group/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/12 09:27:40.962 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:40] "GET /static/js/jquery-1.7.2.min.js HTTP/1.1 304 0" 0.000036 http://10.1.100.7:9091/group/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/12 09:27:40.966 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:40] "GET /static/js/bootstrap.js HTTP/1.1 304 0" 0.000036 http://10.1.100.7:9091/group/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/12 09:27:40.987 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:40] "GET /static/js/base.js HTTP/1.1 304 0" 0.000032 http://10.1.100.7:9091/group/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/12 09:27:40.988 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:40] "GET /static/css/pages/dashboard.css HTTP/1.1 304 0" 0.000029 http://10.1.100.7:9091/group/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+2017/12/12 09:27:41.387 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:41] "GET /static/font/fontawesome-webfont.woff?v=3.2.1 HTTP/1.1 304 0" 0.004149 http://10.1.100.7:9091/static/css/font-awesome.css Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/12 09:27:41  -[Queries/default] - [  OK /    db.Query /     0.4ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/12 09:27:42  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/12 09:27:42  -[Queries/default] - [  OK / db.QueryRow /     0.0ms] - [SELECT COUNT(*) FROM `t_task` T0 ]
+[ORM]2017/12/12 09:27:42  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_id`, T0.`task_name`, T0.`task_type`, T0.`description`, T0.`cron_spec`, T0.`concurrent`, T0.`command`, T0.`status`, T0.`notify`, T0.`notify_email`, T0.`timeout`, T0.`execute_times`, T0.`prev_time`, T0.`create_time` FROM `t_task` T0 ORDER BY T0.`id` DESC LIMIT 20]
+[ORM]2017/12/12 09:27:42  -[Queries/default] - [  OK / db.QueryRow /     0.0ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/12 09:27:42  -[Queries/default] - [  OK /    db.Query /     0.0ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 100]
+2017/12/12 09:27:42.936 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:42] "GET /task/list HTTP/1.1 200 0" 0.026639 http://10.1.100.7:9091/group/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/12 09:27:43  -[Queries/default] - [  OK /    db.Query /     0.4ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/12 09:27:44  -[Queries/default] - [  OK /    db.Query /     0.9ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/12 09:27:44  -[Queries/default] - [  OK / db.QueryRow /     0.3ms] - [SELECT COUNT(*) FROM `t_task_log` T0 ]
+[ORM]2017/12/12 09:27:44  -[Queries/default] - [  OK /    db.Query /     0.1ms] - [SELECT T0.`id`, T0.`task_id`, T0.`output`, T0.`error`, T0.`status`, T0.`process_time`, T0.`create_time` FROM `t_task_log` T0 ORDER BY T0.`id` DESC LIMIT 20]
+[ORM]2017/12/12 09:27:44  -[Queries/default] - [  OK / db.QueryRow /     0.1ms] - [SELECT COUNT(*) FROM `t_task_log` T0 WHERE T0.`status` < ? ] - `0`
+[ORM]2017/12/12 09:27:44  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`task_id`, T0.`output`, T0.`error`, T0.`status`, T0.`process_time`, T0.`create_time` FROM `t_task_log` T0 WHERE T0.`status` < ? ORDER BY T0.`id` DESC LIMIT 20] - `0`
+2017/12/12 09:27:44.301 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:44] "GET / HTTP/1.1 200 0" 0.022130 http://10.1.100.7:9091/task/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/12 09:27:44  -[Queries/default] - [  OK /    db.Query /     0.4ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/12 09:27:46  -[Queries/default] - [  OK /    db.Query /     0.4ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/12 09:27:46  -[Queries/default] - [  OK / db.QueryRow /     0.0ms] - [SELECT COUNT(*) FROM `t_task` T0 ]
+[ORM]2017/12/12 09:27:46  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_id`, T0.`task_name`, T0.`task_type`, T0.`description`, T0.`cron_spec`, T0.`concurrent`, T0.`command`, T0.`status`, T0.`notify`, T0.`notify_email`, T0.`timeout`, T0.`execute_times`, T0.`prev_time`, T0.`create_time` FROM `t_task` T0 ORDER BY T0.`id` DESC LIMIT 20]
+[ORM]2017/12/12 09:27:46  -[Queries/default] - [  OK / db.QueryRow /     0.0ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/12 09:27:46  -[Queries/default] - [  OK /    db.Query /     0.0ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 100]
+2017/12/12 09:27:46.193 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:46] "GET /task/list HTTP/1.1 200 0" 0.002839 http://10.1.100.7:9091/ Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/12 09:27:46  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/12 09:27:49  -[Queries/default] - [  OK /    db.Query /     0.2ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
+[ORM]2017/12/12 09:27:49  -[Queries/default] - [  OK / db.QueryRow /     0.2ms] - [SELECT COUNT(*) FROM `t_task_group` T0 ]
+[ORM]2017/12/12 09:27:49  -[Queries/default] - [  OK /    db.Query /     0.1ms] - [SELECT T0.`id`, T0.`user_id`, T0.`group_name`, T0.`description`, T0.`create_time` FROM `t_task_group` T0 ORDER BY T0.`id` DESC LIMIT 100]
+2017/12/12 09:27:49.198 [1;44m[D] [server.go:2568] 192.168.50.130 - - [12/Dec/2017 09:27:49] "GET /task/add HTTP/1.1 200 0" 0.003191 http://10.1.100.7:9091/task/list Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+[0m
+[ORM]2017/12/12 09:27:49  -[Queries/default] - [  OK /    db.Query /     6.0ms] - [SELECT T0.`id`, T0.`user_name`, T0.`password`, T0.`salt`, T0.`email`, T0.`last_login`, T0.`last_ip`, T0.`status` FROM `t_user` T0 WHERE T0.`id` = ? LIMIT 1] - `1`
